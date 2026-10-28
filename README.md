@@ -46,6 +46,7 @@ A modern commercial web concept and landing platform designed for the Yerevan-ba
 ├── tsconfig.json        # TypeScript configuration
 └── vite.config.ts       # Vite bundler configuration
 
+```
 ---
 
 # NÖNÖ Concept
