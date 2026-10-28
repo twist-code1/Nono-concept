@@ -49,6 +49,4 @@ A modern commercial web concept and landing platform designed for the Yerevan-ba
 ```
 ---
 
-# NÖNÖ Concept
-
 > **Note:** This project is a **non-commercial concept / design study** created for portfolio purposes only. It is not affiliated with or used by any official commercial entity.
