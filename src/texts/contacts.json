@@ -1,0 +1,34 @@
+{
+  "title": "Ready for Real Details",
+  "details": [
+    {
+      "id": "address",
+      "title": "Address",
+      "description": "NÖNÖ Coffee, Yerevan"
+    },
+    {
+      "id": "phone",
+      "title": "Phone or WhatsApp",
+      "description": "A direct contact button can be connected for mobile visitors."
+    },
+    {
+      "id": "instagram",
+      "title": "Instagram",
+      "description": "The official profile can be linked for daily updates and stories."
+    },
+    {
+      "id": "hours",
+      "title": "Working Hours",
+      "description": "Opening hours can be shown clearly for locals and tourists."
+    }
+  ],
+  "social": {
+    "title": "Social Links",
+    "links": [
+      { "id": "instagram", "label": "Instagram", "href": "#home" },
+      { "id": "facebook", "label": "Facebook", "href": "#home" },
+      { "id": "telegram", "label": "Telegram", "href": "#home" }
+    ]
+  },
+  "mapTitle": "NÖNÖ Coffee Location"
+}

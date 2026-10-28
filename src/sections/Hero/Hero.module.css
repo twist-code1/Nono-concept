@@ -1,0 +1,183 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 82svh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(5.8rem, 10vh, 7rem) clamp(1.25rem, 6vw, 5rem) clamp(2.75rem, 6vh, 4.5rem);
+  background-image: url('../../assets/photos/hero-page-bg.webp');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(90deg, rgba(26, 15, 13, 0.86) 0%, rgba(74, 44, 31, 0.55) 44%, rgba(26, 15, 13, 0.2) 100%),
+    linear-gradient(180deg, rgba(18, 9, 7, 0.24) 0%, rgba(18, 9, 7, 0.72) 100%);
+  animation: heroOverlayReveal 1.15s ease-out backwards;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 74% 26%, rgba(212, 163, 115, 0.2), transparent 23rem),
+    linear-gradient(180deg, rgba(253, 251, 247, 0) 57%, #4a2c1f 100%);
+  pointer-events: none;
+  animation: heroGlowReveal 1.5s ease-out 0.15s backwards;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: clamp(0.78rem, 1vw, 0.95rem);
+  font-weight: 700;
+  color: #d4a373;
+  margin-bottom: 0.65rem;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+  animation: heroCopyReveal 0.72s 0.15s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.title {
+  font-size: clamp(2.75rem, 7vw, 6rem);
+  line-height: 0.98;
+  margin-bottom: 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-wrap: balance;
+  text-shadow: 0 10px 32px rgba(0, 0, 0, 0.44);
+  animation: heroCopyReveal 0.82s 0.27s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.description {
+  max-width: 34rem;
+  font-size: clamp(1rem, 1.7vw, 1.28rem);
+  margin-bottom: 1.4rem;
+  line-height: 1.75;
+  color: rgba(253, 251, 247, 0.9);
+  animation: heroCopyReveal 0.76s 0.39s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.95rem 1.55rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #d4a373, #b97745);
+  color: #1a0f0d;
+  border-radius: 999px;
+  border: 1px solid rgba(253, 251, 247, 0.35);
+  box-shadow: 0 18px 42px rgba(18, 9, 7, 0.35);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  animation: heroCopyReveal 0.72s 0.51s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 24%, rgba(255, 255, 255, 0.36) 49%, transparent 74%);
+  transform: translateX(-125%);
+  transition: transform 0.55s ease;
+  pointer-events: none;
+}
+
+.button:hover {
+  filter: brightness(1.06);
+  transform: translateY(-3px);
+  box-shadow: 0 24px 52px rgba(18, 9, 7, 0.42);
+}
+
+.button:hover::before {
+  transform: translateX(125%);
+}
+
+.button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+@keyframes heroOverlayReveal {
+  from {
+    opacity: 0.36;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroGlowReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroCopyReveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 680px) {
+  .hero {
+    align-items: flex-end;
+    min-height: 78svh;
+    padding: 6.25rem 1.15rem 2.5rem;
+    background-position: 62% center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+:global(html[lang='am']) .title {
+  font-size: clamp(2.35rem, 6.4vw, 4.8rem);
+}
+
+@media (max-width: 680px) {
+  :global(html[lang='am']) .title {
+    font-size: clamp(2.05rem, 9vw, 3.25rem);
+    line-height: 1.02;
+  }
+
+  :global(html[lang='am']) .description {
+    font-size: 0.96rem;
+  }
+}

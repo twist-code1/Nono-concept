@@ -1,0 +1,15 @@
+{
+  "brand": "NÖNÖ",
+  "documentTitle": "NÖNÖ Coffee",
+  "navigation": [
+    { "id": "home", "href": "#home", "label": "Home" },
+    { "id": "about", "href": "#about", "label": "About" },
+    { "id": "menu", "href": "#menu", "label": "Menu" },
+    { "id": "reviews", "href": "#reviews", "label": "Reviews" },
+    { "id": "contact", "href": "#contact", "label": "Contact" }
+  ],
+  "navigationToggle": {
+    "open": "Open navigation menu",
+    "close": "Close navigation menu"
+  }
+}

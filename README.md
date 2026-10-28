@@ -1,46 +1,75 @@
-# ☕ NÖNÖ Concept — Specialty Coffee Web Platform
+# React + TypeScript + Vite
 
-A modern commercial web concept and landing platform designed for the Yerevan-based specialty coffee shop **NÖNÖ**. Built from scratch with zero third-party UI dependencies, focusing on modular architecture, clean typography, and smooth performance.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🔗 Live Demo
-**[Visit NÖNÖ Concept](https://nono-concept.web.app/)**
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🛠 Tech Stack
+## React Compiler
 
-- **Core:** React 19, TypeScript 6
-- **Build Tool:** Vite 8
-- **Styling:** Custom CSS3 (Responsive Layout & Animations)
-- **Code Quality:** ESLint 10 (`typescript-eslint`, React Hooks rules)
-- **Deployment:** Firebase Hosting
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
----
+## Expanding the ESLint configuration
 
-## ✨ Key Highlights
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-- **Modular Architecture:** Clean separation of concerns across page `sections`, reusable UI `components`, custom React `hooks`, and decoupled static content (`texts`).
-- **Zero-Bloat Dependencies:** Engineered purely with React and native CSS without heavy external UI frameworks for fast bundle delivery.
-- **Strict Type Safety:** Configured with strict TypeScript compilation (`tsc -b`) prior to production builds.
-- **Responsive Design:** Fluid layout tailored for both desktop and mobile viewports.
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
----
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-## 📁 Project Structure
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-```text
-.
-├── public/              # Static public assets
-├── src/                 # Application source code
-│   ├── assets/          # Images, fonts & media
-│   ├── components/      # Reusable UI components
-│   ├── hooks/           # Custom React hooks
-│   ├── sections/        # Core landing page sections
-│   ├── texts/           # Decoupled text content & data
-│   ├── App.tsx          # Root component & section assembly
-│   ├── App.css          # Component-level styles
-│   ├── index.css        # Global styles & resets
-│   └── main.tsx         # Application entry point
-├── firebase.json        # Firebase Hosting configuration
-├── tsconfig.json        # TypeScript configuration
-└── vite.config.ts       # Vite bundler configuration
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+
+```

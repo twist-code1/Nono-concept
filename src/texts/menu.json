@@ -1,0 +1,49 @@
+{
+  "title": "Sample Menu",
+  "controls": {
+    "previous": "Previous menu items",
+    "next": "Next menu items"
+  },
+  "items": [
+    {
+      "id": "espresso",
+      "visual": "espresso",
+      "eyebrow": "Espresso shot",
+      "name": "Espresso",
+      "description": "Bold and focused classic coffee.",
+      "price": "800 AMD"
+    },
+    {
+      "id": "cappuccino",
+      "visual": "cappuccino",
+      "eyebrow": "Milk coffee",
+      "name": "Cappuccino",
+      "description": "Espresso with steamed milk and foam.",
+      "price": "1200 AMD"
+    },
+    {
+      "id": "latte",
+      "visual": "latte",
+      "eyebrow": "Soft latte",
+      "name": "Latte",
+      "description": "Smooth, creamy, and easy to love.",
+      "price": "1400 AMD"
+    },
+    {
+      "id": "raf",
+      "visual": "raf",
+      "eyebrow": "Signature cup",
+      "name": "Raf",
+      "description": "Creamy coffee with soft vanilla notes.",
+      "price": "1600 AMD"
+    },
+    {
+      "id": "croissant",
+      "visual": "croissant",
+      "eyebrow": "Fresh pastry",
+      "name": "Croissant",
+      "description": "Buttery pastry for a coffee break.",
+      "price": "900 AMD"
+    }
+  ]
+}

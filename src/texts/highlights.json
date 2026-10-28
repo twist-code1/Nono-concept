@@ -1,0 +1,20 @@
+{
+  "title": "Concept Highlights",
+  "items": [
+    {
+      "id": "atmosphere",
+      "name": "Atmosphere",
+      "text": "A calm, warm visual direction built for guests who want coffee, comfort, and a memorable place to return to."
+    },
+    {
+      "id": "menu-focus",
+      "name": "Menu Focus",
+      "text": "Menu cards are designed to make drinks and pastries easy to browse, with clear pricing and room for real product photos later."
+    },
+    {
+      "id": "conversion",
+      "name": "Conversion",
+      "text": "The page can quickly adapt to real contacts, social links, delivery options, reservations, or a direct call-to-action."
+    }
+  ]
+}
