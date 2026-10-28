@@ -51,6 +51,8 @@ A modern commercial web concept and landing platform designed for the Yerevan-ba
 
 ## 📹 Website Demonstration
 
-<video src="./screenshots/nono-present.mp4" autoplay loop muted playsinline width="100%"></video>
+<video src="../screenshots/nono-present.mp4" autoplay loop muted playsinline width="100%"></video>
+
+---
 
 > ❗ **Note:** This project is a **non-commercial concept / design study** created for portfolio purposes only. It is not affiliated with or used by any official commercial entity.
