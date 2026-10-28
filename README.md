@@ -51,7 +51,7 @@ A modern commercial web concept and landing platform designed for the Yerevan-ba
 
 ## 📹 Website Demonstration
 
-<video src="../screenshots/nono-present.mp4" autoplay loop muted playsinline width="100%"></video>
+![NÖNÖ Demo Animation](./screenshots/nono-present.mp4)
 
 ---
 
